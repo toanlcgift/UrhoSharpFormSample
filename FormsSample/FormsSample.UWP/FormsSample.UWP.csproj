@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{4386F5A7-4EE6-440D-AF67-68601FC6C599}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormsSample.UWP</RootNamespace>
+    <AssemblyName>FormsSample.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>FormsSample.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\Assets\Data\CommandLine.txt">
+      <Link>Assets\Data\CommandLine.txt</Link>
+    </Content>
+    <Content Include="..\assets\data\fonts\Anonymous Pro.ttf">
+      <Link>Assets\Data\Fonts\Anonymous Pro.ttf</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Box.mdl">
+      <Link>Assets\Data\Models\Box.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Cone.mdl">
+      <Link>Assets\Data\Models\Cone.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Cylinder.mdl">
+      <Link>Assets\Data\Models\Cylinder.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Dome.mdl">
+      <Link>Assets\Data\Models\Dome.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\editor\Axes.mdl">
+      <Link>Assets\Data\Models\Editor\Axes.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\editor\ImagePlane.mdl">
+      <Link>Assets\Data\Models\Editor\ImagePlane.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\editor\RotateAxes.mdl">
+      <Link>Assets\Data\Models\Editor\RotateAxes.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\editor\ScaleAxes.mdl">
+      <Link>Assets\Data\Models\Editor\ScaleAxes.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Enemy1.mdl">
+      <Link>Assets\Data\Models\Enemy1.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\HoverBike.mdl">
+      <Link>Assets\Data\Models\HoverBike.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Jack.mdl">
+      <Link>Assets\Data\Models\Jack.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Jack_Walk.ani">
+      <Link>Assets\Data\Models\Jack_Walk.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Mushroom.mdl">
+      <Link>Assets\Data\Models\Mushroom.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\CloudPlane.mdl">
+      <Link>Assets\Data\Models\NinjaSnowWar\CloudPlane.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Level.mdl">
+      <Link>Assets\Data\Models\NinjaSnowWar\Level.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja.mdl">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Attack1.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Attack1.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Attack2.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Attack2.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Attack3.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Attack3.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Backflip.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Backflip.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Block.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Block.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Climb.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Climb.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Crouch.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Crouch.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Death1.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Death1.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Death2.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Death2.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_HighJump.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_HighJump.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Idle1.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Idle1.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Idle2.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Idle2.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Idle3.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Idle3.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Jump.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Jump.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_JumpNoHeight.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_JumpNoHeight.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Kick.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Kick.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_SideKick.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_SideKick.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Spin.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Spin.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Stealth.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Stealth.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Walk.ani">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Walk.ani</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Potion.mdl">
+      <Link>Assets\Data\Models\NinjaSnowWar\Potion.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\SnowBall.mdl">
+      <Link>Assets\Data\Models\NinjaSnowWar\SnowBall.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\SnowCrate.mdl">
+      <Link>Assets\Data\Models\NinjaSnowWar\SnowCrate.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Plane.mdl">
+      <Link>Assets\Data\Models\Plane.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Player.mdl">
+      <Link>Assets\Data\Models\Player.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Pyramid.mdl">
+      <Link>Assets\Data\Models\Pyramid.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Sphere.mdl">
+      <Link>Assets\Data\Models\Sphere.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\TeaPot.mdl">
+      <Link>Assets\Data\Models\TeaPot.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\models\Torus.mdl">
+      <Link>Assets\Data\Models\Torus.mdl</Link>
+    </Content>
+    <Content Include="..\assets\data\music\Ninja Gods.ogg">
+      <Link>Assets\Data\Music\Ninja Gods.ogg</Link>
+    </Content>
+    <Content Include="..\Assets\Data\NinjaSnowWarShaders.xml">
+      <Link>Assets\Data\NinjaSnowWarShaders.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\UrhoIcon.icns">
+      <Link>Assets\Data\Textures\UrhoIcon.icns</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\GoldIcon.scml">
+      <Link>Assets\Data\Urho2D\GoldIcon.scml</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\greenspiral.pex">
+      <Link>Assets\Data\Urho2D\greenspiral.pex</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp.scml">
+      <Link>Assets\Data\Urho2D\imp\imp.scml</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\isometric_grass_and_water.tmx">
+      <Link>Assets\Data\Urho2D\isometric_grass_and_water.tmx</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\sun.pex">
+      <Link>Assets\Data\Urho2D\sun.pex</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\sun2.pex">
+      <Link>Assets\Data\Urho2D\sun2.pex</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\sun3.pex">
+      <Link>Assets\Data\Urho2D\sun3.pex</Link>
+    </Content>
+    <None Include="..\Assets\Data\EditorStrings.json">
+      <Link>Assets\Data\EditorStrings.json</Link>
+    </None>
+    <None Include="..\Assets\Data\StringsDe.json">
+      <Link>Assets\Data\StringsDe.json</Link>
+    </None>
+    <None Include="..\Assets\Data\StringsEnRu.json">
+      <Link>Assets\Data\StringsEnRu.json</Link>
+    </None>
+    <None Include="FormsSample.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\assets\data\fonts\Anonymous Pro.png">
+      <Link>Assets\Data\Fonts\Anonymous Pro.png</Link>
+    </Content>
+    <Content Include="..\assets\data\fonts\Anonymous Pro.sdf">
+      <Link>Assets\Data\Fonts\Anonymous Pro.sdf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\assets\data\fonts\OFL.txt">
+      <Link>Assets\Data\Fonts\OFL.txt</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\BlueUnlit.xml">
+      <Link>Assets\Data\Materials\Editor\BlueUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\BrightBlueUnlit.xml">
+      <Link>Assets\Data\Materials\Editor\BrightBlueUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\BrightGreenUnlit.xml">
+      <Link>Assets\Data\Materials\Editor\BrightGreenUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\BrightRedUnlit.xml">
+      <Link>Assets\Data\Materials\Editor\BrightRedUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconCamera.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconCamera.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconCollisionTrigger.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconCollisionTrigger.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconCustomGeometry.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconCustomGeometry.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconLight.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconLight.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconParticleEmitter.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconParticleEmitter.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconPointLight.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconPointLight.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconSoundListener.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconSoundListener.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconSoundSource.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconSoundSource.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconSplinePathPoint.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconSplinePathPoint.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconSpotLight.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconSpotLight.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\DebugIconZone.xml">
+      <Link>Assets\Data\Materials\Editor\DebugIconZone.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\GreenUnlit.xml">
+      <Link>Assets\Data\Materials\Editor\GreenUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\RedUnlit.xml">
+      <Link>Assets\Data\Materials\Editor\RedUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\editor\TexturedUnlit.xml">
+      <Link>Assets\Data\Materials\Editor\TexturedUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Enemy1.xml">
+      <Link>Assets\Data\Materials\Enemy1.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\glass.xml">
+      <Link>Assets\Data\Materials\glass.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Grass.xml">
+      <Link>Assets\Data\Materials\Grass.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Green.xml">
+      <Link>Assets\Data\Materials\Green.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\GreenTransparent.xml">
+      <Link>Assets\Data\Materials\GreenTransparent.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Jack.xml">
+      <Link>Assets\Data\Materials\Jack.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\JackEnvMap.xml">
+      <Link>Assets\Data\Materials\JackEnvMap.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\LitSmoke.xml">
+      <Link>Assets\Data\Materials\LitSmoke.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\LitSmokeSoft.xml">
+      <Link>Assets\Data\Materials\LitSmokeSoft.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Mushroom.xml">
+      <Link>Assets\Data\Materials\Mushroom.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\MushroomEnvMap.xml">
+      <Link>Assets\Data\Materials\MushroomEnvMap.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\MushroomWind.xml">
+      <Link>Assets\Data\Materials\MushroomWind.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\MushroomWindUnlit.xml">
+      <Link>Assets\Data\Materials\MushroomWindUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\ninjasnowwar\CloudPlane.xml">
+      <Link>Assets\Data\Materials\NinjaSnowWar\CloudPlane.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\ninjasnowwar\Ninja.xml">
+      <Link>Assets\Data\Materials\NinjaSnowWar\Ninja.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\ninjasnowwar\Potion.xml">
+      <Link>Assets\Data\Materials\NinjaSnowWar\Potion.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\ninjasnowwar\Snow.xml">
+      <Link>Assets\Data\Materials\NinjaSnowWar\Snow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\ninjasnowwar\SnowCrate.xml">
+      <Link>Assets\Data\Materials\NinjaSnowWar\SnowCrate.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Particle.xml">
+      <Link>Assets\Data\Materials\Particle.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Check.xml">
+      <Link>Assets\Data\Materials\PBR\Check.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\ColorGrid.xml">
+      <Link>Assets\Data\Materials\PBR\ColorGrid.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Concrete.xml">
+      <Link>Assets\Data\Materials\PBR\Concrete.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\DiamonPlate.xml">
+      <Link>Assets\Data\Materials\PBR\DiamonPlate.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Dynamic.xml">
+      <Link>Assets\Data\Materials\PBR\Dynamic.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\EmissivePannel.xml">
+      <Link>Assets\Data\Materials\PBR\EmissivePannel.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\HighRoughMetallic0.xml">
+      <Link>Assets\Data\Materials\PBR\HighRoughMetallic0.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\HighRoughMetallic10.xml">
+      <Link>Assets\Data\Materials\PBR\HighRoughMetallic10.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\HighRoughMetallic3.xml">
+      <Link>Assets\Data\Materials\PBR\HighRoughMetallic3.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\HighRoughMetallic5.xml">
+      <Link>Assets\Data\Materials\PBR\HighRoughMetallic5.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\HighRoughMetallic7.xml">
+      <Link>Assets\Data\Materials\PBR\HighRoughMetallic7.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\HoverBikeGlass.xml">
+      <Link>Assets\Data\Materials\PBR\HoverBikeGlass.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\HoverBikeHull.xml">
+      <Link>Assets\Data\Materials\PBR\HoverBikeHull.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Lead.xml">
+      <Link>Assets\Data\Materials\PBR\Lead.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Leather.xml">
+      <Link>Assets\Data\Materials\PBR\Leather.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Metallic0.xml">
+      <Link>Assets\Data\Materials\PBR\Metallic0.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Metallic10.xml">
+      <Link>Assets\Data\Materials\PBR\Metallic10.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Metallic3.xml">
+      <Link>Assets\Data\Materials\PBR\Metallic3.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Metallic5.xml">
+      <Link>Assets\Data\Materials\PBR\Metallic5.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Metallic7.xml">
+      <Link>Assets\Data\Materials\PBR\Metallic7.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Metallic9.xml">
+      <Link>Assets\Data\Materials\PBR\Metallic9.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\MetallicRough0.xml">
+      <Link>Assets\Data\Materials\PBR\MetallicRough0.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\MetallicRough10.xml">
+      <Link>Assets\Data\Materials\PBR\MetallicRough10.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\MetallicRough3.xml">
+      <Link>Assets\Data\Materials\PBR\MetallicRough3.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\MetallicRough5.xml">
+      <Link>Assets\Data\Materials\PBR\MetallicRough5.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\MetallicRough7.xml">
+      <Link>Assets\Data\Materials\PBR\MetallicRough7.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Mud.xml">
+      <Link>Assets\Data\Materials\PBR\Mud.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Roughness0.xml">
+      <Link>Assets\Data\Materials\PBR\Roughness0.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Roughness10.xml">
+      <Link>Assets\Data\Materials\PBR\Roughness10.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Roughness3.xml">
+      <Link>Assets\Data\Materials\PBR\Roughness3.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Roughness5.xml">
+      <Link>Assets\Data\Materials\PBR\Roughness5.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Roughness7.xml">
+      <Link>Assets\Data\Materials\PBR\Roughness7.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Sand.xml">
+      <Link>Assets\Data\Materials\PBR\Sand.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\pbr\Tile.xml">
+      <Link>Assets\Data\Materials\PBR\Tile.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\plane.xml">
+      <Link>Assets\Data\Materials\plane.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Player.xml">
+      <Link>Assets\Data\Materials\Player.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\RibbonTrail.xml">
+      <Link>Assets\Data\Materials\RibbonTrail.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Skybox.xml">
+      <Link>Assets\Data\Materials\Skybox.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Skybox2.xml">
+      <Link>Assets\Data\Materials\Skybox2.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\SlashTrail.xml">
+      <Link>Assets\Data\Materials\SlashTrail.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Smoke.xml">
+      <Link>Assets\Data\Materials\Smoke.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\SmokeSoft.xml">
+      <Link>Assets\Data\Materials\SmokeSoft.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Stone.xml">
+      <Link>Assets\Data\Materials\Stone.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\StoneEnvMap.xml">
+      <Link>Assets\Data\Materials\StoneEnvMap.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\StoneEnvMapSmall.xml">
+      <Link>Assets\Data\Materials\StoneEnvMapSmall.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\StoneSmall.xml">
+      <Link>Assets\Data\Materials\StoneSmall.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\StoneTiled.xml">
+      <Link>Assets\Data\Materials\StoneTiled.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\StoneTiledH.xml">
+      <Link>Assets\Data\Materials\StoneTiledH.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Terrain.xml">
+      <Link>Assets\Data\Materials\Terrain.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\UrhoDecal.xml">
+      <Link>Assets\Data\Materials\UrhoDecal.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\UrhoDecalAlpha.xml">
+      <Link>Assets\Data\Materials\UrhoDecalAlpha.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\UrhoDecalAlphaMaskTwoSided.xml">
+      <Link>Assets\Data\Materials\UrhoDecalAlphaMaskTwoSided.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\VColUnlit.xml">
+      <Link>Assets\Data\Materials\VColUnlit.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\materials\Water.xml">
+      <Link>Assets\Data\Materials\Water.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Stealth.xml">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Stealth.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\models\ninjasnowwar\Ninja_Walk.xml">
+      <Link>Assets\Data\Models\NinjaSnowWar\Ninja_Walk.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\objects\LightFlash.xml">
+      <Link>Assets\Data\Objects\LightFlash.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\objects\Ninja.xml">
+      <Link>Assets\Data\Objects\Ninja.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\objects\Potion.xml">
+      <Link>Assets\Data\Objects\Potion.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\objects\SnowBall.xml">
+      <Link>Assets\Data\Objects\SnowBall.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\objects\SnowCrate.xml">
+      <Link>Assets\Data\Objects\SnowCrate.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\Burst.xml">
+      <Link>Assets\Data\Particle\Burst.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\Disco.xml">
+      <Link>Assets\Data\Particle\Disco.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\Fire.xml">
+      <Link>Assets\Data\Particle\Fire.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\Smoke.xml">
+      <Link>Assets\Data\Particle\Smoke.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\SmokeStack.xml">
+      <Link>Assets\Data\Particle\SmokeStack.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\SnowExplosion.xml">
+      <Link>Assets\Data\Particle\SnowExplosion.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\SnowExplosionBig.xml">
+      <Link>Assets\Data\Particle\SnowExplosionBig.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\particle\SnowExplosionFade.xml">
+      <Link>Assets\Data\Particle\SnowExplosionFade.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\AutoExposure.xml">
+      <Link>Assets\Data\PostProcess\AutoExposure.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\Bloom.xml">
+      <Link>Assets\Data\PostProcess\Bloom.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\BloomHDR.xml">
+      <Link>Assets\Data\PostProcess\BloomHDR.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\Blur.xml">
+      <Link>Assets\Data\PostProcess\Blur.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\ColorCorrection.xml">
+      <Link>Assets\Data\PostProcess\ColorCorrection.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\FXAA2.xml">
+      <Link>Assets\Data\PostProcess\FXAA2.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\FXAA3.xml">
+      <Link>Assets\Data\PostProcess\FXAA3.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\GammaCorrection.xml">
+      <Link>Assets\Data\PostProcess\GammaCorrection.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\GreyScale.xml">
+      <Link>Assets\Data\PostProcess\GreyScale.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\postprocess\Tonemap.xml">
+      <Link>Assets\Data\PostProcess\Tonemap.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\scenes\NinjaSnowWar.xml">
+      <Link>Assets\Data\Scenes\NinjaSnowWar.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\scenes\PBRExample.xml">
+      <Link>Assets\Data\Scenes\PBRExample.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\scenes\SceneLoadExample.xml">
+      <Link>Assets\Data\Scenes\SceneLoadExample.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\sounds\BigExplosion.wav">
+      <Link>Assets\Data\Sounds\BigExplosion.wav</Link>
+    </Content>
+    <Content Include="..\assets\data\sounds\NutThrow.wav">
+      <Link>Assets\Data\Sounds\NutThrow.wav</Link>
+    </Content>
+    <Content Include="..\assets\data\sounds\PlayerFist.wav">
+      <Link>Assets\Data\Sounds\PlayerFist.wav</Link>
+    </Content>
+    <Content Include="..\assets\data\sounds\PlayerFistHit.wav">
+      <Link>Assets\Data\Sounds\PlayerFistHit.wav</Link>
+    </Content>
+    <Content Include="..\assets\data\sounds\PlayerLand.wav">
+      <Link>Assets\Data\Sounds\PlayerLand.wav</Link>
+    </Content>
+    <Content Include="..\assets\data\sounds\Powerup.wav">
+      <Link>Assets\Data\Sounds\Powerup.wav</Link>
+    </Content>
+    <Content Include="..\assets\data\sounds\SmallExplosion.wav">
+      <Link>Assets\Data\Sounds\SmallExplosion.wav</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\BrightDay1_NegX.dds">
+      <Link>Assets\Data\Textures\BrightDay1_NegX.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\BrightDay1_NegY.dds">
+      <Link>Assets\Data\Textures\BrightDay1_NegY.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\BrightDay1_NegZ.dds">
+      <Link>Assets\Data\Textures\BrightDay1_NegZ.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\BrightDay1_PosX.dds">
+      <Link>Assets\Data\Textures\BrightDay1_PosX.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\BrightDay1_PosY.dds">
+      <Link>Assets\Data\Textures\BrightDay1_PosY.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\BrightDay1_PosZ.dds">
+      <Link>Assets\Data\Textures\BrightDay1_PosZ.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\BW.png">
+      <Link>Assets\Data\Textures\Editor\BW.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\EditorIcons.png">
+      <Link>Assets\Data\Textures\Editor\EditorIcons.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\EditorIcons.xml">
+      <Link>Assets\Data\Textures\Editor\EditorIcons.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\HSV20.png">
+      <Link>Assets\Data\Textures\Editor\HSV20.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconCamera.png">
+      <Link>Assets\Data\Textures\Editor\IconCamera.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconCollisionTrigger.png">
+      <Link>Assets\Data\Textures\Editor\IconCollisionTrigger.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconCustomGeometry.png">
+      <Link>Assets\Data\Textures\Editor\IconCustomGeometry.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconLight.png">
+      <Link>Assets\Data\Textures\Editor\IconLight.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconParticleEmitter.png">
+      <Link>Assets\Data\Textures\Editor\IconParticleEmitter.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconPointLight.png">
+      <Link>Assets\Data\Textures\Editor\IconPointLight.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconSoundListener.png">
+      <Link>Assets\Data\Textures\Editor\IconSoundListener.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconSoundSource.png">
+      <Link>Assets\Data\Textures\Editor\IconSoundSource.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconSplinePathPoint.png">
+      <Link>Assets\Data\Textures\Editor\IconSplinePathPoint.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconSpotLight.png">
+      <Link>Assets\Data\Textures\Editor\IconSpotLight.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\IconZone.png">
+      <Link>Assets\Data\Textures\Editor\IconZone.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\editor\NoPreviewAvailable.png">
+      <Link>Assets\Data\Textures\Editor\NoPreviewAvailable.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Eject_Seat.png">
+      <Link>Assets\Data\Textures\Eject_Seat.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Enemy1.png">
+      <Link>Assets\Data\Textures\Enemy1.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Flare.dds">
+      <Link>Assets\Data\Textures\Flare.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Glass_Cockpit.png">
+      <Link>Assets\Data\Textures\Glass_Cockpit.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Grass.dds">
+      <Link>Assets\Data\Textures\Grass.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\HeightMap.png">
+      <Link>Assets\Data\Textures\HeightMap.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Jack_body_color.jpg">
+      <Link>Assets\Data\Textures\Jack_body_color.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Jack_face.jpg">
+      <Link>Assets\Data\Textures\Jack_face.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Logo.png">
+      <Link>Assets\Data\Textures\Logo.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Logo.xml">
+      <Link>Assets\Data\Textures\Logo.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\LogoLarge.png">
+      <Link>Assets\Data\Textures\LogoLarge.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\LogoLarge.xml">
+      <Link>Assets\Data\Textures\LogoLarge.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Mushroom.dds">
+      <Link>Assets\Data\Textures\Mushroom.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\CloudPlane.dds">
+      <Link>Assets\Data\Textures\NinjaSnowWar\CloudPlane.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\HealthBarBorder.png">
+      <Link>Assets\Data\Textures\NinjaSnowWar\HealthBarBorder.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\HealthBarInside.png">
+      <Link>Assets\Data\Textures\NinjaSnowWar\HealthBarInside.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\Ninja.dds">
+      <Link>Assets\Data\Textures\NinjaSnowWar\Ninja.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\Sight.png">
+      <Link>Assets\Data\Textures\NinjaSnowWar\Sight.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\Sight.xml">
+      <Link>Assets\Data\Textures\NinjaSnowWar\Sight.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\Snow.dds">
+      <Link>Assets\Data\Textures\NinjaSnowWar\Snow.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\ninjasnowwar\SnowCrate.dds">
+      <Link>Assets\Data\Textures\NinjaSnowWar\SnowCrate.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\OldUI.png">
+      <Link>Assets\Data\Textures\OldUI.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\OldUI.xml">
+      <Link>Assets\Data\Textures\OldUI.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_pmrem_negx.dds">
+      <Link>Assets\Data\Textures\output_pmrem_negx.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_pmrem_negy.dds">
+      <Link>Assets\Data\Textures\output_pmrem_negy.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_pmrem_negz.dds">
+      <Link>Assets\Data\Textures\output_pmrem_negz.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_pmrem_posx.dds">
+      <Link>Assets\Data\Textures\output_pmrem_posx.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_pmrem_posy.dds">
+      <Link>Assets\Data\Textures\output_pmrem_posy.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_pmrem_posz.dds">
+      <Link>Assets\Data\Textures\output_pmrem_posz.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_skybox_negx.dds">
+      <Link>Assets\Data\Textures\output_skybox_negx.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_skybox_negy.dds">
+      <Link>Assets\Data\Textures\output_skybox_negy.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_skybox_negz.dds">
+      <Link>Assets\Data\Textures\output_skybox_negz.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_skybox_posx.dds">
+      <Link>Assets\Data\Textures\output_skybox_posx.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_skybox_posy.dds">
+      <Link>Assets\Data\Textures\output_skybox_posy.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\output_skybox_posz.dds">
+      <Link>Assets\Data\Textures\output_skybox_posz.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\concrete\Albedo.jpg">
+      <Link>Assets\Data\Textures\PBR\Concrete\Albedo.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\concrete\Albedo.xml">
+      <Link>Assets\Data\Textures\PBR\Concrete\Albedo.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\concrete\Normal.jpg">
+      <Link>Assets\Data\Textures\PBR\Concrete\Normal.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\concrete\PBR.jpg">
+      <Link>Assets\Data\Textures\PBR\Concrete\PBR.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\emissive pannel\Albedo.jpg">
+      <Link>Assets\Data\Textures\PBR\Emissive Pannel\Albedo.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\emissive pannel\Albedo.xml">
+      <Link>Assets\Data\Textures\PBR\Emissive Pannel\Albedo.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\emissive pannel\Emissive.jpg">
+      <Link>Assets\Data\Textures\PBR\Emissive Pannel\Emissive.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\emissive pannel\Normal.jpg">
+      <Link>Assets\Data\Textures\PBR\Emissive Pannel\Normal.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\emissive pannel\PBR.jpg">
+      <Link>Assets\Data\Textures\PBR\Emissive Pannel\PBR.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\pannel\Albedo.jpg">
+      <Link>Assets\Data\Textures\PBR\Pannel\Albedo.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\pannel\Albedo.xml">
+      <Link>Assets\Data\Textures\PBR\Pannel\Albedo.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\pannel\Normal.jpg">
+      <Link>Assets\Data\Textures\PBR\Pannel\Normal.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\pbr\pannel\PBR.jpg">
+      <Link>Assets\Data\Textures\PBR\Pannel\PBR.jpg</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Player1.png">
+      <Link>Assets\Data\Textures\Player1.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\RibbonTrail.png">
+      <Link>Assets\Data\Textures\RibbonTrail.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Skybox.xml">
+      <Link>Assets\Data\Textures\Skybox.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Skybox2.xml">
+      <Link>Assets\Data\Textures\Skybox2.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\SlashTrail.png">
+      <Link>Assets\Data\Textures\SlashTrail.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\Smoke.dds">
+      <Link>Assets\Data\Textures\Smoke.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\StoneDiffuse.dds">
+      <Link>Assets\Data\Textures\StoneDiffuse.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\StoneNormal.dds">
+      <Link>Assets\Data\Textures\StoneNormal.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\T_ColorGrid.png">
+      <Link>Assets\Data\Textures\T_ColorGrid.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\T_ColorGrid.xml">
+      <Link>Assets\Data\Textures\T_ColorGrid.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\TerrainDetail1.dds">
+      <Link>Assets\Data\Textures\TerrainDetail1.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\TerrainDetail2.dds">
+      <Link>Assets\Data\Textures\TerrainDetail2.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\TerrainDetail3.dds">
+      <Link>Assets\Data\Textures\TerrainDetail3.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\TerrainWeights.dds">
+      <Link>Assets\Data\Textures\TerrainWeights.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\TouchInput.png">
+      <Link>Assets\Data\Textures\TouchInput.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\UI.png">
+      <Link>Assets\Data\Textures\UI.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\UI.xml">
+      <Link>Assets\Data\Textures\UI.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\UrhoDecal.dds">
+      <Link>Assets\Data\Textures\UrhoDecal.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\UrhoDecalAlpha.dds">
+      <Link>Assets\Data\Textures\UrhoDecalAlpha.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\UrhoIcon.png">
+      <Link>Assets\Data\Textures\UrhoIcon.png</Link>
+    </Content>
+    <Content Include="..\assets\data\textures\WaterNoise.dds">
+      <Link>Assets\Data\Textures\WaterNoise.dds</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\DefaultStyle.xml">
+      <Link>Assets\Data\UI\DefaultStyle.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorColorWheel.xml">
+      <Link>Assets\Data\UI\EditorColorWheel.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorContextMenu.xml">
+      <Link>Assets\Data\UI\EditorContextMenu.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorHierarchyWindow.xml">
+      <Link>Assets\Data\UI\EditorHierarchyWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorIcons.xml">
+      <Link>Assets\Data\UI\EditorIcons.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorInspector_Attribute.xml">
+      <Link>Assets\Data\UI\EditorInspector_Attribute.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorInspector_Style.xml">
+      <Link>Assets\Data\UI\EditorInspector_Style.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorInspector_Tags.xml">
+      <Link>Assets\Data\UI\EditorInspector_Tags.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorInspector_Variable.xml">
+      <Link>Assets\Data\UI\EditorInspector_Variable.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorInspectorWindow.xml">
+      <Link>Assets\Data\UI\EditorInspectorWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorLayersWindow.xml">
+      <Link>Assets\Data\UI\EditorLayersWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorMaterialWindow.xml">
+      <Link>Assets\Data\UI\EditorMaterialWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorParticleEffectWindow.xml">
+      <Link>Assets\Data\UI\EditorParticleEffectWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorPreferencesDialog.xml">
+      <Link>Assets\Data\UI\EditorPreferencesDialog.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorQuickMenu.xml">
+      <Link>Assets\Data\UI\EditorQuickMenu.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorResourceBrowser.xml">
+      <Link>Assets\Data\UI\EditorResourceBrowser.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorResourceFilterWindow.xml">
+      <Link>Assets\Data\UI\EditorResourceFilterWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorSettingsDialog.xml">
+      <Link>Assets\Data\UI\EditorSettingsDialog.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorSoundTypeWindow.xml">
+      <Link>Assets\Data\UI\EditorSoundTypeWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorSpawnWindow.xml">
+      <Link>Assets\Data\UI\EditorSpawnWindow.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\EditorViewport.xml">
+      <Link>Assets\Data\UI\EditorViewport.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\MessageBox.xml">
+      <Link>Assets\Data\UI\MessageBox.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\OldStyle.xml">
+      <Link>Assets\Data\UI\OldStyle.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\ScreenJoystick.xml">
+      <Link>Assets\Data\UI\ScreenJoystick.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\ScreenJoystick_NinjaSnowWar.xml">
+      <Link>Assets\Data\UI\ScreenJoystick_NinjaSnowWar.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\ScreenJoystick_Samples.xml">
+      <Link>Assets\Data\UI\ScreenJoystick_Samples.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\ScreenJoystickSettings.xml">
+      <Link>Assets\Data\UI\ScreenJoystickSettings.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\ScreenJoystickSettings_NinjaSnowWar.xml">
+      <Link>Assets\Data\UI\ScreenJoystickSettings_NinjaSnowWar.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\ScreenJoystickSettings_Samples.xml">
+      <Link>Assets\Data\UI\ScreenJoystickSettings_Samples.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\ui\UILoadExample.xml">
+      <Link>Assets\Data\UI\UILoadExample.xml</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\Aster.png">
+      <Link>Assets\Data\Urho2D\Aster.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\Ball.png">
+      <Link>Assets\Data\Urho2D\Ball.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\Box.png">
+      <Link>Assets\Data\Urho2D\Box.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\goldicon\1.png">
+      <Link>Assets\Data\Urho2D\GoldIcon\1.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\goldicon\2.png">
+      <Link>Assets\Data\Urho2D\GoldIcon\2.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\goldicon\3.png">
+      <Link>Assets\Data\Urho2D\GoldIcon\3.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\goldicon\4.png">
+      <Link>Assets\Data\Urho2D\GoldIcon\4.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\goldicon\5.png">
+      <Link>Assets\Data\Urho2D\GoldIcon\5.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\greenspiral.png">
+      <Link>Assets\Data\Urho2D\greenspiral.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp.txt">
+      <Link>Assets\Data\Urho2D\imp\imp.txt</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_blood.png">
+      <Link>Assets\Data\Urho2D\imp\imp_blood.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_body.png">
+      <Link>Assets\Data\Urho2D\imp\imp_body.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_footbig.png">
+      <Link>Assets\Data\Urho2D\imp\imp_footbig.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_footsmall.png">
+      <Link>Assets\Data\Urho2D\imp\imp_footsmall.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_handbig.png">
+      <Link>Assets\Data\Urho2D\imp\imp_handbig.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_handsmall.png">
+      <Link>Assets\Data\Urho2D\imp\imp_handsmall.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_handthrow.png">
+      <Link>Assets\Data\Urho2D\imp\imp_handthrow.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_head.png">
+      <Link>Assets\Data\Urho2D\imp\imp_head.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_headangry.png">
+      <Link>Assets\Data\Urho2D\imp\imp_headangry.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\imp\imp_headblink.png">
+      <Link>Assets\Data\Urho2D\imp\imp_headblink.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\isometric_grass_and_water.png">
+      <Link>Assets\Data\Urho2D\isometric_grass_and_water.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\sun.png">
+      <Link>Assets\Data\Urho2D\sun.png</Link>
+    </Content>
+    <Content Include="..\assets\data\urho2d\sun2.png">
+      <Link>Assets\Data\Urho2D\sun2.png</Link>
+    </Content>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-100.png" />
+    <Content Include="Assets\LockScreenLogo.scale-125.png" />
+    <Content Include="Assets\LockScreenLogo.scale-150.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\LockScreenLogo.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="UrhoSharp.Forms">
+      <Version>1.8.71</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FormsSample\FormsSample.csproj">
+      <Project>{8dd49470-0958-42d9-841f-f15589dc9f99}</Project>
+      <Name>FormsSample</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+</Project>
